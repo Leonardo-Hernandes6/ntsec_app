@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ntsec_kickoff_app/presentation/pages/portfolio/components/number_item/number_item.dart';
 import 'package:ntsec_kickoff_app/presentation/pages/portfolio/components/portfolio_app_bar/portfolio_app_bar.dart';
 import 'package:ntsec_kickoff_app/presentation/pages/portfolio/components/portfolio_carroussel_item/portfolio_carroussel_item.dart';
 import 'package:ntsec_kickoff_app/presentation/pages/portfolio/components/portfolio_elements/portfolio_elements.dart';
@@ -34,24 +33,28 @@ class _PotfolioPageState extends State<PotfolioPage> {
 
   final List<Gradient> gradients = [
     LinearGradient(
-      colors: [Colors.blue.shade900, Colors.black],
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
+      colors: [Color(0xFF353735), Color(0xFF7BA73F)],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+      stops: [0.3, 1.0],
     ),
     LinearGradient(
-      colors: [const Color.fromARGB(255, 0, 57, 104), Colors.yellow],
-      begin: Alignment.topRight,
-      end: Alignment.bottomLeft,
+      colors: [Color(0xFF353735), Color(0xFFF2AD24)],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+      stops: [0.3, 1.0],
     ),
     LinearGradient(
-      colors: [const Color.fromARGB(255, 0, 57, 104), Colors.pink],
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
+      colors: [Color(0xFF353735), Color(0xFFE4087E)],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+      stops: [0.3, 1.0],
     ),
     LinearGradient(
-      colors: [const Color.fromARGB(255, 4, 0, 61), Colors.blue],
-      begin: Alignment.topRight,
-      end: Alignment.bottomLeft,
+      colors: [Color(0xFF353735), Color(0xFF00C2FA)],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+      stops: [0.3, 1.0],
     ),
   ];
 
@@ -77,7 +80,7 @@ class _PotfolioPageState extends State<PotfolioPage> {
               children: [
                 PortfolioAppBar(),
                 Image.asset(
-                  "assets/images/ntsec_logo.png",
+                  "assets/images/ntsec_logo_white.png",
                   height: 60,
                 ),
                 const SizedBox(
@@ -88,7 +91,7 @@ class _PotfolioPageState extends State<PotfolioPage> {
                   child: Text(
                     "Um só parceiro para toda a sua jornada de segurança",
                     style: TextStyle(
-                      fontSize: 40.0,
+                      fontSize: 36.0,
                       color: Colors.grey.shade200,
                     ),
                   ),

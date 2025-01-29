@@ -23,12 +23,10 @@ class _MainPageState extends State<MainPage> {
               height: MediaQuery.of(context).size.height,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [
-                    Colors.blue.shade900,
-                    Colors.blue.shade800,
-                    Colors.purple.shade400,
-                  ],
-                  begin: Alignment.topLeft,
+                  colors: [Color(0xFF353735), Color(0xFF4C6030)],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  stops: [0.3, 1.0],
                 ),
               ),
               child: Padding(

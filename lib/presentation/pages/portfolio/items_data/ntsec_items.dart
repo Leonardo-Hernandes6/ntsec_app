@@ -4,17 +4,17 @@ final List<Map<String, dynamic>> ntsec_items = [
     "data": [
       {
         "icon": {
-          "path": "assets/colaborators/hpe.svg",
-          "height": 40.0,
-          "width": 40.0,
+          "path": "assets/colaborators/hpe-aruba.svg",
+          "height": 22.0,
+          "width": 22.0,
         },
         "data": ["SD-WANa"],
       },
       {
         "icon": {
           "path": "assets/colaborators/checkpoint.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "height": 25.0,
+          "width": 25.0,
         },
         "data": ["XDR/EDR", "Sandbox", "Browser Security"],
       },
@@ -37,8 +37,8 @@ final List<Map<String, dynamic>> ntsec_items = [
       {
         "icon": {
           "path": "assets/colaborators/nutanix.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "height": 13.0,
+          "width": 13.0,
         },
         "data": ["Private/Hybrid Multicloud"],
       },
@@ -65,17 +65,17 @@ final List<Map<String, dynamic>> ntsec_items = [
     "data": [
       {
         "icon": {
-          "path": "assets/colaborators/hpe.svg",
-          "height": 40.0,
-          "width": 40.0,
+          "path": "assets/colaborators/hpe-aruba.svg",
+          "height": 22.0,
+          "width": 22.0,
         },
         "data": ["SD-WAN"],
       },
       {
         "icon": {
           "path": "assets/colaborators/checkpoint.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "height": 25.0,
+          "width": 25.0,
         },
         "data": [
           "Mobile Security",
@@ -97,8 +97,8 @@ final List<Map<String, dynamic>> ntsec_items = [
       {
         "icon": {
           "path": "assets/colaborators/nutanix.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "height": 13.0,
+          "width": 13.0,
         },
         "data": ["Private/Hybrid Multicloud"],
       },
@@ -117,17 +117,17 @@ final List<Map<String, dynamic>> ntsec_items = [
     "data": [
       {
         "icon": {
-          "path": "assets/colaborators/hpe.svg",
-          "height": 40.0,
-          "width": 40.0,
+          "path": "assets/colaborators/hpe-aruba.svg",
+          "height": 22.0,
+          "width": 22.0,
         },
         "data": ["SD-WAN"],
       },
       {
         "icon": {
           "path": "assets/colaborators/checkpoint.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "height": 25.0,
+          "width": 25.0,
         },
         "data": [
           "Workload/Container Security",
@@ -148,8 +148,8 @@ final List<Map<String, dynamic>> ntsec_items = [
       {
         "icon": {
           "path": "assets/colaborators/nutanix.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "height": 13.0,
+          "width": 13.0,
         },
         "data": [
           "Private/Hybrid Multicloud",
@@ -176,8 +176,8 @@ final List<Map<String, dynamic>> ntsec_items = [
       {
         "icon": {
           "path": "assets/colaborators/checkpoint.svg",
-          "height": 40.0,
-          "width": 40.0,
+          "height": 25.0,
+          "width": 25.0,
         },
         "data": [
           "Workload/Container Security",

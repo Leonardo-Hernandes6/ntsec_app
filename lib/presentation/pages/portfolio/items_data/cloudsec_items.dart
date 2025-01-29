@@ -4,43 +4,21 @@ final List<Map<String, dynamic>> cloudsec_items = [
     "data": [
       {
         "icon": {
-          "path": "assets/colaborators/hpe.svg",
-          "height": 40.0,
-          "width": 40.0,
-        },
-        "data": ["SD-Wan"],
-      },
-      {
-        "icon": {
           "path": "assets/colaborators/checkpoint.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "height": 25.0,
+          "width": 25.0,
         },
-        "data": ["XDR/EDR", "Sandbox", "Browser Security"],
+        "data": ["CSPM"],
       },
       {
         "icon": {
-          "path": "assets/colaborators/f5.svg",
+          "path": "assets/colaborators/hcl.svg",
           "height": 22.0,
           "width": 22.0,
         },
-        "data": ["Load Balancer (LLB/GSLB)", "Distributed Cloud Services"],
-      },
-      {
-        "icon": {
-          "path": "assets/colaborators/tenable.svg",
-          "height": 22.0,
-          "width": 22.0,
-        },
-        "data": ["SIEM"],
-      },
-      {
-        "icon": {
-          "path": "assets/colaborators/f5.svg",
-          "height": 22.0,
-          "width": 22.0,
-        },
-        "data": ["AI Based Video Surveillance"],
+        "data": [
+          "Observabillity",
+        ],
       },
     ],
   },
@@ -49,19 +27,39 @@ final List<Map<String, dynamic>> cloudsec_items = [
     "data": [
       {
         "icon": {
-          "path": "assets/colaborators/hpe.svg",
-          "height": 40.0,
-          "width": 40.0,
+          "path": "assets/colaborators/checkpoint.svg",
+          "height": 25.0,
+          "width": 25.0,
         },
-        "data": ["SD-Wan"],
+        "data": [
+          "CASB",
+          "Cloud Protection",
+        ],
       },
+      {
+        "icon": {
+          "path": "assets/colaborators/f5.svg",
+          "height": 22.0,
+          "width": 22.0,
+        },
+        "data": [
+          "WAF/WAAP",
+        ],
+      },
+    ],
+  },
+  {
+    "title": "Disponibilidade",
+    "data": [
       {
         "icon": {
           "path": "assets/colaborators/checkpoint.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "height": 25.0,
+          "width": 25.0,
         },
-        "data": ["XDR/EDR", "Sandbox", "Browser Security"],
+        "data": [
+          "Workload/Container Security",
+        ],
       },
       {
         "icon": {
@@ -69,23 +67,56 @@ final List<Map<String, dynamic>> cloudsec_items = [
           "height": 22.0,
           "width": 22.0,
         },
-        "data": ["Load Balancer (LLB/GSLB)", "Distributed Cloud Services"],
+        "data": [
+          "DNS",
+          "DDoS Protection",
+        ],
       },
       {
         "icon": {
-          "path": "assets/colaborators/tenable.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "path": "assets/colaborators/nutanix.svg",
+          "height": 13.0,
+          "width": 13.0,
         },
-        "data": ["SIEM"],
+        "data": [
+          "High Performance Virtualization",
+        ],
       },
       {
         "icon": {
-          "path": "assets/colaborators/f5.svg",
+          "path": "assets/colaborators/purestorage.svg",
           "height": 22.0,
           "width": 22.0,
         },
-        "data": ["AI Based Video Surveillance"],
+        "data": [
+          "Cloud-Based Block Storage",
+          "Unified Fast File and Object Storage",
+        ],
+      },
+    ],
+  },
+  {
+    "title": "Integridade",
+    "data": [
+      {
+        "icon": {
+          "path": "assets/colaborators/checkpoint.svg",
+          "height": 25.0,
+          "width": 25.0,
+        },
+        "data": [
+          "Workload/Container Security",
+        ],
+      },
+      {
+        "icon": {
+          "path": "assets/colaborators/hcl.svg",
+          "height": 22.0,
+          "width": 22.0,
+        },
+        "data": [
+          "Appscan",
+        ],
       },
     ],
   },

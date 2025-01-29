@@ -19,7 +19,7 @@ class PortfolioTitle extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              "assets/images/ntsec_logo.png",
+              "assets/images/ntsec_logo_white.png",
               height: 30,
             ),
             const SizedBox(

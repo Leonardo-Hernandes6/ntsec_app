@@ -4,35 +4,43 @@ final List<Map<String, dynamic>> infosec_items = [
     "data": [
       {
         "icon": {
-          "path": "assets/colaborators/hpe.svg",
-          "height": 40.0,
-          "width": 40.0,
+          "path": "assets/colaborators/checkpoint.svg",
+          "height": 25.0,
+          "width": 25.0,
         },
-        "data": ["SD-Wanaa"],
+        "data": ["XDR/EDR"],
       },
       {
         "icon": {
-          "path": "assets/colaborators/f5.svg",
+          "path": "assets/colaborators/varonis.svg",
+          "height": 20.0,
+          "width": 20.0,
+        },
+        "data": [
+          "Data Classification",
+          "Data Behavloral Analytics",
+        ],
+      },
+      {
+        "icon": {
+          "path": "assets/colaborators/veritas.svg",
           "height": 22.0,
           "width": 22.0,
         },
-        "data": ["Load Balancer (LLB/GSLB)", "Distributed Cloud Services"],
+        "data": [
+          "Software-Defined Storage",
+          "Data Visibillity and Governance",
+          "Email and Data Archiving",
+          "Legal Discovery and Compilance",
+        ],
       },
       {
         "icon": {
-          "path": "assets/colaborators/tenable.svg",
+          "path": "assets/colaborators/Elastic.svg",
           "height": 22.0,
           "width": 22.0,
         },
         "data": ["SIEM"],
-      },
-      {
-        "icon": {
-          "path": "assets/colaborators/f5.svg",
-          "height": 22.0,
-          "width": 22.0,
-        },
-        "data": ["AI Based Video Surveillance"],
       },
     ],
   },
@@ -41,43 +49,96 @@ final List<Map<String, dynamic>> infosec_items = [
     "data": [
       {
         "icon": {
-          "path": "assets/colaborators/hpe.svg",
-          "height": 40.0,
-          "width": 40.0,
-        },
-        "data": ["SD-Wan"],
-      },
-      {
-        "icon": {
           "path": "assets/colaborators/checkpoint.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "height": 25.0,
+          "width": 25.0,
         },
-        "data": ["XDR/EDR", "Sandbox", "Browser Security"],
+        "data": ["API Security"],
       },
       {
         "icon": {
-          "path": "assets/colaborators/f5.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "path": "assets/colaborators/varonis.svg",
+          "height": 20.0,
+          "width": 20.0,
         },
-        "data": ["Load Balancer (LLB/GSLB)", "Distributed Cloud Services"],
+        "data": [
+          "Data Governance",
+          "Data Classification",
+          "Data Access Control Management",
+          "Data Behavloral Analytics",
+          "Data Privacy Compilance",
+        ],
       },
       {
         "icon": {
-          "path": "assets/colaborators/tenable.svg",
+          "path": "assets/colaborators/veritas.svg",
+          "height": 22.0,
+          "width": 22.0,
+        },
+        "data": [
+          "Email and Data Archiving",
+        ],
+      },
+      {
+        "icon": {
+          "path": "assets/colaborators/elastic.svg",
           "height": 22.0,
           "width": 22.0,
         },
         "data": ["SIEM"],
       },
+    ],
+  },
+  {
+    "title": "Disponibilidade",
+    "data": [
       {
         "icon": {
-          "path": "assets/colaborators/f5.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "path": "assets/colaborators/veritas.svg",
+          "height": 40.0,
+          "width": 40.0,
         },
-        "data": ["AI Based Video Surveillance"],
+        "data": [
+          "Enterprise Backup and Recovery Backup and Disaster Recovery for SMBs",
+          "SaaS Backup",
+          "Software-Defined Storage",
+        ],
+      },
+    ],
+  },
+  {
+    "title": "Integridade",
+    "data": [
+      {
+        "icon": {
+          "path": "assets/colaborators/checkpoint.svg",
+          "height": 25.0,
+          "width": 25.0,
+        },
+        "data": [
+          "API Security",
+        ],
+      },
+      {
+        "icon": {
+          "path": "assets/colaborators/varonis.svg",
+          "height": 20.0,
+          "width": 20.0,
+        },
+        "data": [
+          "Data Insider Threat Detection",
+        ],
+      },
+      {
+        "icon": {
+          "path": "assets/colaborators/veritas.svg",
+          "height": 40.0,
+          "width": 40.0,
+        },
+        "data": [
+          "Data Privacy Compilance",
+          "Legal Discovery and Compilance",
+        ],
       },
     ],
   },

@@ -13,7 +13,7 @@ class MainPageHeader extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Image.asset(
-            "assets/images/ntsec_logo.png",
+            "assets/images/ntsec_logo_white.png",
             height: 35.0,
           ),
           Row(

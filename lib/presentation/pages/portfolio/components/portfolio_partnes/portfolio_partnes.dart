@@ -81,6 +81,23 @@ class PortfolioPartnes extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(
+            height: 20.0,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              SvgPicture.asset(
+                'assets/colaborators/f5.svg',
+                height: 30.0,
+                width: 30.0,
+                colorFilter: ColorFilter.mode(
+                  Colors.grey.shade300,
+                  BlendMode.srcIn,
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:ntsec_kickoff_app/presentation/pages/portfolio/portfolio_page.dart';
 

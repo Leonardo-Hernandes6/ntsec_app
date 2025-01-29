@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ntsec_kickoff_app/presentation/pages/menu/menu_page.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
-  const CustomBottomNavigationBar({super.key});
+  int selected_index;
+  Function onTap;
+
+  CustomBottomNavigationBar({
+    super.key,
+    required this.selected_index,
+    required this.onTap,
+  });
 
   @override
   State<CustomBottomNavigationBar> createState() =>
@@ -10,8 +18,6 @@ class CustomBottomNavigationBar extends StatefulWidget {
 }
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
-  int _selectedIndex = 1;
-
   final List<String> _icons = [
     "assets/icons/icon_0.svg",
     "assets/icons/icon_1.svg",
@@ -19,12 +25,6 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     "assets/icons/icon_3.svg",
     "assets/icons/icon_5.svg",
   ];
-
-  void onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: List.generate(_icons.length, (index) {
               return GestureDetector(
-                onTap: () => onItemTapped(index),
+                onTap: () => widget.onTap(index),
                 child: _buildIcon(index),
               );
             }),
@@ -53,7 +53,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   }
 
   Widget _buildIcon(int index) {
-    bool isSelected = index == _selectedIndex;
+    bool isSelected = index == widget.selected_index;
 
     return isSelected
         ? CircleAvatar(

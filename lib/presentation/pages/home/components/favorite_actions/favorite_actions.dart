@@ -25,12 +25,12 @@ class FavoriteActions extends StatelessWidget {
                 FavoriteActionsCard(
                   color: Color(0xff83ae36),
                   icon: "assets/logos/support_center_logo.png",
-                  label: "Support Center",
+                  label: "Principais serviços",
                 ),
                 FavoriteActionsCard(
                   color: Color(0xff83ae36),
                   icon: "assets/logos/depth_defense_logo.png",
-                  label: "Depth Defese",
+                  label: "Recon",
                 ),
               ],
             ),

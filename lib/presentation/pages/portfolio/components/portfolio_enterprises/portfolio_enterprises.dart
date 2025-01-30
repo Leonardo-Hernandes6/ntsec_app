@@ -18,7 +18,7 @@ class PortfolioEnterprises extends StatelessWidget {
           Text(
             "Nosso portfólio é fundamentado em um framework robusto e proprietário, composto por nossas empresas e baseado em nossas premissas.",
             style: TextStyle(
-              color: Colors.grey.shade300,
+              color: Colors.white,
               fontSize: 16.0,
               fontWeight: FontWeight.bold,
             ),

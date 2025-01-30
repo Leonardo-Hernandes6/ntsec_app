@@ -12,9 +12,9 @@ final List<Map<String, dynamic>> cloudsec_items = [
       },
       {
         "icon": {
-          "path": "assets/colaborators/hcl.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "path": "assets/colaborators/hcl_1.svg",
+          "height": 25.0,
+          "width": 25.0,
         },
         "data": [
           "Observabillity",
@@ -110,9 +110,9 @@ final List<Map<String, dynamic>> cloudsec_items = [
       },
       {
         "icon": {
-          "path": "assets/colaborators/hcl.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "path": "assets/colaborators/hcl_1.svg",
+          "height": 25.0,
+          "width": 25.0,
         },
         "data": [
           "Appscan",

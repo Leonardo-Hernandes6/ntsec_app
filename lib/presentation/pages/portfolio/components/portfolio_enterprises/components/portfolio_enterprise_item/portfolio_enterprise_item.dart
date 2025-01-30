@@ -22,7 +22,7 @@ class PortfolioEnterpriseItem extends StatelessWidget {
             title,
             style: TextStyle(
               fontSize: 20.0,
-              color: Colors.grey.shade300,
+              color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -30,7 +30,7 @@ class PortfolioEnterpriseItem extends StatelessWidget {
           Text(
             sub_title,
             style: TextStyle(
-              color: Colors.grey.shade300,
+              color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
           ),

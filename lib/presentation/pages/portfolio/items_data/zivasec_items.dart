@@ -37,9 +37,9 @@ final List<Map<String, dynamic>> zivasec_items = [
       },
       {
         "icon": {
-          "path": "assets/colaborators/elastic.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "path": "assets/colaborators/elastic_1.svg",
+          "height": 31.0,
+          "width": 31.0,
         },
         "data": [
           "SIEM",
@@ -47,7 +47,7 @@ final List<Map<String, dynamic>> zivasec_items = [
       },
       {
         "icon": {
-          "path": "assets/colaborators/ajhua.svg",
+          "path": "assets/colaborators/dahua.svg",
           "height": 22.0,
           "width": 22.0,
         },
@@ -111,15 +111,15 @@ final List<Map<String, dynamic>> zivasec_items = [
       },
       {
         "icon": {
-          "path": "assets/colaborators/elastic.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "path": "assets/colaborators/elastic_1.svg",
+          "height": 31.0,
+          "width": 31.0,
         },
         "data": ["SIEM"],
       },
       {
         "icon": {
-          "path": "assets/colaborators/ajhua.svg",
+          "path": "assets/colaborators/dahua.svg",
           "height": 22.0,
           "width": 22.0,
         },
@@ -185,7 +185,7 @@ final List<Map<String, dynamic>> zivasec_items = [
       },
       {
         "icon": {
-          "path": "assets/colaborators/ajhua.svg",
+          "path": "assets/colaborators/dahua_4.svg",
           "height": 22.0,
           "width": 22.0,
         },

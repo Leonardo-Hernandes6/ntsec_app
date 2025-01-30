@@ -8,7 +8,7 @@ final List<Map<String, dynamic>> ntsec_items = [
           "height": 22.0,
           "width": 22.0,
         },
-        "data": ["SD-WANa"],
+        "data": ["SD-WAN"],
       },
       {
         "icon": {
@@ -28,14 +28,6 @@ final List<Map<String, dynamic>> ntsec_items = [
       },
       {
         "icon": {
-          "path": "assets/colaborators/tenable.svg",
-          "height": 22.0,
-          "width": 22.0,
-        },
-        "data": ["SIEM"],
-      },
-      {
-        "icon": {
           "path": "assets/colaborators/nutanix.svg",
           "height": 13.0,
           "width": 13.0,
@@ -44,17 +36,17 @@ final List<Map<String, dynamic>> ntsec_items = [
       },
       {
         "icon": {
-          "path": "assets/colaborators/elastic.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "path": "assets/colaborators/elastic_1.svg",
+          "height": 31.0,
+          "width": 31.0,
         },
         "data": ["SIEM"],
       },
       {
         "icon": {
-          "path": "assets/colaborators/f5.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "path": "assets/colaborators/Mediamodifier-Designaaa.svg",
+          "height": 25.0,
+          "width": 25.0,
         },
         "data": ["AI Based Video Surveillance"],
       },
@@ -104,9 +96,9 @@ final List<Map<String, dynamic>> ntsec_items = [
       },
       {
         "icon": {
-          "path": "assets/colaborators/elastic.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "path": "assets/colaborators/elastic_1.svg",
+          "height": 31.0,
+          "width": 31.0,
         },
         "data": ["Siem"],
       },
@@ -196,9 +188,9 @@ final List<Map<String, dynamic>> ntsec_items = [
       },
       {
         "icon": {
-          "path": "assets/colaborators/hcl.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "path": "assets/colaborators/hcl_1.svg",
+          "height": 25.0,
+          "width": 25.0,
         },
         "data": [
           "SAST/DAST",

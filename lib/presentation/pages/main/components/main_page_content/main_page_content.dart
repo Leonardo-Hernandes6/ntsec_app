@@ -7,10 +7,50 @@ class MainPageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 10.0, right: 10.0, top: 100.0),
+      padding: const EdgeInsets.only(left: 10.0, right: 10.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15.0),
+            child: SizedBox(
+              width: double.infinity,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "Construindo hoje \num amanhã mais\nseguro!",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 35.0,
+                    ),
+                  ),
+                  ShaderMask(
+                    shaderCallback: (bounds) => LinearGradient(
+                      colors: [
+                        Color(0xFF7EAD41),
+                        Color(0xFFF4C81A),
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ).createShader(bounds),
+                    child: Text(
+                      "MAIS SEGURO",
+                      style: TextStyle(
+                        fontSize: 36.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 40.0,
+          ),
           Text(
             "Recuperar senha",
             style: TextStyle(
@@ -115,6 +155,7 @@ class MainPageContent extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 110.0),
         ],
       ),
     );

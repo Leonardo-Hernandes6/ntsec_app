@@ -15,31 +15,35 @@ class PortfolioPremises extends StatelessWidget {
         Text(
           "Conheça nossas premissas:",
           style: TextStyle(
-            color: Colors.grey.shade300,
+            color: Colors.white,
             fontSize: 16.0,
             fontWeight: FontWeight.bold,
           ),
         ),
         PortfolioPremissesCard(
-          icon: Icons.visibility,
+          icon: "assets/icons/visibility_icon.svg",
           title: "Visibilidade",
+          iconHeigth: 28.0,
           description:
               "Capacidade de monitorar e visualizar todas as atividades, dados e eventos em uma rede, sistema ou aplicação. É essencial para identificar rapidamente anomalias, ameaças e comportamentos indesejados.",
         ),
         PortfolioPremissesCard(
-          icon: Icons.settings,
+          icon: "assets/icons/control_icon.svg",
           title: "Controle",
+          iconHeigth: 28.0,
           description:
               "Capacidade de gerenciar, regular e restringir o acesso e o uso de recursos e dados dentro de uma organização. É fundamental para garantir que apenas usuários autorizados possam acessar determinados recursos e dados",
         ),
         PortfolioPremissesCard(
-          icon: Icons.access_time,
+          icon: "assets/icons/availability_icon.svg",
           title: "Disponibilidade",
+          iconHeigth: 35.0,
           description:
               "Capacidade de garantir que os sistemas, redes e aplicações estejam operacionais e acessíveis sempre que necessário. Ë crucial para manter a continuidade dos negócios e minimizar o tempo de inatividade",
         ),
         PortfolioPremissesCard(
-          icon: Icons.fact_check,
+          icon: "assets/icons/integrity.svg",
+          iconHeigth: 35.0,
           title: "Integridade",
           description:
               "Capacidade de garantir que os dados e os recursos estejam corretos, completos e protegidos contra alterações não autorizadas. É vital para a precisão e a confiabilidade das informações",

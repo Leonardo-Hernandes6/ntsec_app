@@ -30,7 +30,7 @@ class PortfolioTitle extends StatelessWidget {
               style: TextStyle(
                 fontSize: 19.0,
                 fontWeight: FontWeight.bold,
-                color: Colors.grey.shade200,
+                color: Colors.white,
               ),
             ),
           ],

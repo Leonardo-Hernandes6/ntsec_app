@@ -19,7 +19,6 @@ class CustomBottomNavigationBar extends StatefulWidget {
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   final List<String> _icons = [
-    "assets/icons/icon_0.svg",
     "assets/icons/icon_1.svg",
     "assets/icons/icon_2.svg",
     "assets/icons/icon_3.svg",

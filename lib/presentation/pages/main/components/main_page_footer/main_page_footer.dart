@@ -38,7 +38,7 @@ class MainPageFooter extends StatelessWidget {
               height: 110.0,
               decoration: BoxDecoration(
                 color: Colors.grey.shade300,
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(15),
               ),
               child: Row(
                 children: [

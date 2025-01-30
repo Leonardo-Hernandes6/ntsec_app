@@ -23,9 +23,9 @@ final List<Map<String, dynamic>> infosec_items = [
       },
       {
         "icon": {
-          "path": "assets/colaborators/veritas.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "path": "assets/colaborators/veritas_6.svg",
+          "height": 20.0,
+          "width": 20.0,
         },
         "data": [
           "Software-Defined Storage",
@@ -36,9 +36,9 @@ final List<Map<String, dynamic>> infosec_items = [
       },
       {
         "icon": {
-          "path": "assets/colaborators/Elastic.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "path": "assets/colaborators/elastic_1.svg",
+          "height": 31.0,
+          "width": 31.0,
         },
         "data": ["SIEM"],
       },
@@ -71,9 +71,9 @@ final List<Map<String, dynamic>> infosec_items = [
       },
       {
         "icon": {
-          "path": "assets/colaborators/veritas.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "path": "assets/colaborators/veritas_6.svg",
+          "height": 20.0,
+          "width": 20.0,
         },
         "data": [
           "Email and Data Archiving",
@@ -81,9 +81,9 @@ final List<Map<String, dynamic>> infosec_items = [
       },
       {
         "icon": {
-          "path": "assets/colaborators/elastic.svg",
-          "height": 22.0,
-          "width": 22.0,
+          "path": "assets/colaborators/elastic_1.svg",
+          "height": 31.0,
+          "width": 31.0,
         },
         "data": ["SIEM"],
       },
@@ -94,9 +94,9 @@ final List<Map<String, dynamic>> infosec_items = [
     "data": [
       {
         "icon": {
-          "path": "assets/colaborators/veritas.svg",
-          "height": 40.0,
-          "width": 40.0,
+          "path": "assets/colaborators/veritas_6.svg",
+          "height": 20.0,
+          "width": 20.0,
         },
         "data": [
           "Enterprise Backup and Recovery Backup and Disaster Recovery for SMBs",
@@ -131,9 +131,9 @@ final List<Map<String, dynamic>> infosec_items = [
       },
       {
         "icon": {
-          "path": "assets/colaborators/veritas.svg",
-          "height": 40.0,
-          "width": 40.0,
+          "path": "assets/colaborators/veritas_6.svg",
+          "height": 20.0,
+          "width": 20.0,
         },
         "data": [
           "Data Privacy Compilance",

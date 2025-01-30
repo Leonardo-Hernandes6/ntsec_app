@@ -11,26 +11,57 @@ class PortfolioCarrousselItem extends StatelessWidget {
     required this.data,
   });
 
+  String _getIconPath(String title) {
+    switch (title) {
+      case "Visibilidade":
+        return "assets/icons/visibility_icon.svg";
+      case "Controle":
+        return "assets/icons/control_icon.svg";
+      case "Disponibilidade":
+        return "assets/icons/availability_icon.svg";
+      case "Integridade":
+        return "assets/icons/availability_icon.svg";
+      default:
+        return "assets/icons/integrity_icon.svg";
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      padding: const EdgeInsets.symmetric(horizontal: 40.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Título principal
-          Center(
-            child: Text(
-              title,
-              style: TextStyle(
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
-                color: Colors.grey.shade300,
+          Row(
+            children: [
+              const SizedBox(
+                width: 20.0,
               ),
+              SvgPicture.asset(
+                _getIconPath(title),
+                height: 25.0,
+              ),
+              const SizedBox(
+                width: 40.0,
+              ),
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          ),
+          Divider(
+            color: Colors.white.withValues(
+              alpha: 0.4,
             ),
+            thickness: 1,
           ),
           const SizedBox(height: 20.0),
-
           ...data.map((item) {
             return Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0),
@@ -42,7 +73,7 @@ class PortfolioCarrousselItem extends StatelessWidget {
                     height: item["icon"]["height"],
                     width: item["icon"]["width"],
                     colorFilter: ColorFilter.mode(
-                      Colors.grey.shade300,
+                      Colors.white,
                       BlendMode.srcIn,
                     ),
                   ),
@@ -54,7 +85,7 @@ class PortfolioCarrousselItem extends StatelessWidget {
                       text,
                       style: TextStyle(
                         fontSize: 12.0,
-                        color: Colors.grey.shade300,
+                        color: Colors.white,
                         fontWeight: FontWeight.bold,
                       ),
                     ),

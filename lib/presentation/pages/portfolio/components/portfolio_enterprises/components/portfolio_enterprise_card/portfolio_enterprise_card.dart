@@ -22,7 +22,7 @@ class PortfolioEnterpriseCard extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(40),
           border: Border.all(
-            color: Colors.grey.shade300,
+            color: Colors.white,
           ),
         ),
         child: Padding(
@@ -33,7 +33,7 @@ class PortfolioEnterpriseCard extends StatelessWidget {
               Text(
                 title,
                 style: TextStyle(
-                  color: Colors.grey.shade300,
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 20.0,
                 ),
@@ -43,7 +43,7 @@ class PortfolioEnterpriseCard extends StatelessWidget {
               ),
               Text(description,
                   style: TextStyle(
-                    color: Colors.grey.shade400,
+                    color: Colors.white,
                     fontWeight: FontWeight.w600,
                     fontSize: 16.0,
                   ),

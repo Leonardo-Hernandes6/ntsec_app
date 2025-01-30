@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class PortfolioPremissesCard extends StatelessWidget {
-  final IconData icon;
+  final String icon;
   final String title;
   final String description;
+  final double iconHeigth;
 
   const PortfolioPremissesCard({
     super.key,
     required this.icon,
+    required this.iconHeigth,
     required this.title,
     required this.description,
   });
@@ -18,16 +21,18 @@ class PortfolioPremissesCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20.0),
       child: Column(
         children: [
-          Icon(
+          SvgPicture.asset(
             icon,
-            color: Colors.grey.shade300,
-            size: 50.0,
+            height: iconHeigth,
+          ),
+          const SizedBox(
+            height: 10.0,
           ),
           Text(
             // "Visibilidade",
             title,
             style: TextStyle(
-              color: Colors.grey.shade300,
+              color: Colors.white,
               fontSize: 20.0,
               fontWeight: FontWeight.bold,
             ),
@@ -37,9 +42,8 @@ class PortfolioPremissesCard extends StatelessWidget {
           ),
           Text(
             description,
-            // "",
             style: TextStyle(
-              color: Colors.grey.shade300,
+              color: Colors.white,
               fontSize: 16.0,
               fontWeight: FontWeight.w500,
             ),

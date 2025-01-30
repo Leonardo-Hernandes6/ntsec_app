@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:ntsec_kickoff_app/presentation/pages/portfolio/components/portfolio_app_bar/portfolio_app_bar.dart';
 import 'package:ntsec_kickoff_app/presentation/pages/portfolio/components/portfolio_carroussel_item/portfolio_carroussel_item.dart';
 import 'package:ntsec_kickoff_app/presentation/pages/portfolio/components/portfolio_elements/portfolio_elements.dart';
@@ -27,31 +28,31 @@ class _PotfolioPageState extends State<PotfolioPage> {
     "assets/logos/zivasec_logo.png"
   ];
 
-  final PageController _titlePageController = PageController();
   final PageController _itemPageController = PageController();
   int currentIndex = 0;
+  int currentItemPageIndex = 0;
 
   final List<Gradient> gradients = [
     LinearGradient(
-      colors: [Color(0xFF353735), Color(0xFF7BA73F)],
+      colors: [Color.fromARGB(255, 118, 168, 52), Color(0xFF032b30)],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
       stops: [0.3, 1.0],
     ),
     LinearGradient(
-      colors: [Color(0xFF353735), Color(0xFFF2AD24)],
+      colors: [Color.fromARGB(255, 201, 27, 114), Color(0xFF032b30)],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
       stops: [0.3, 1.0],
     ),
     LinearGradient(
-      colors: [Color(0xFF353735), Color(0xFFE4087E)],
+      colors: [Color.fromARGB(255, 216, 157, 62), Color(0xFF032b30)],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
       stops: [0.3, 1.0],
     ),
     LinearGradient(
-      colors: [Color(0xFF353735), Color(0xFF00C2FA)],
+      colors: [Color.fromARGB(255, 36, 90, 189), Color(0xFF032b30)],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
       stops: [0.3, 1.0],
@@ -64,6 +65,21 @@ class _PotfolioPageState extends State<PotfolioPage> {
     cloudsec_items,
     zivasec_items,
   ];
+
+  @override
+  void initState() {
+    super.initState();
+    _setLightStatusBar();
+  }
+
+  void _setLightStatusBar() {
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.white,
+      statusBarIconBrightness: Brightness.light,
+      systemNavigationBarColor: Colors.white,
+      systemNavigationBarIconBrightness: Brightness.light,
+    ));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -79,13 +95,13 @@ class _PotfolioPageState extends State<PotfolioPage> {
             child: Column(
               children: [
                 PortfolioAppBar(),
-                Image.asset(
-                  "assets/images/ntsec_logo_white.png",
+                SizedBox(
                   height: 60,
+                  child: Image.asset(
+                    "assets/images/ntsec_logo_white.png",
+                  ),
                 ),
-                const SizedBox(
-                  height: 30.0,
-                ),
+                const SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: Text(
@@ -93,78 +109,131 @@ class _PotfolioPageState extends State<PotfolioPage> {
                     style: TextStyle(
                       fontSize: 36.0,
                       color: Colors.grey.shade200,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 30.0,
-                ),
+                const SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: Text(
+                    "Com mais de 15 anos de experiência dedicados à excelência em segurança cibernética, o Grupo NTSec é reconhecido por oferecer soluções avançadas e integradas para rede, infraestrutura, nuvem e dados.",
                     style: TextStyle(
                       fontSize: 16.0,
-                      color: Colors.grey.shade300,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w300,
                     ),
-                    "com mais de 15 anos de experiência dedicados à excelência em segurança cibernética, o Grupo NTSec é reconhecido por oferecer soluções avançadas e integradas para rede, infraestrutura, numve e dados. Com uma forte cultura de inovação e um compromisso inabalável com o futuro seguro, o Grupo NTSec dispõe de um portfólio de serviços que o mantém sempre à frente dos desafios tecnológicos, assegurando que seus mais de 200 clientes possam focar no crescimento de seus negócios com total tranquilidade.",
                   ),
                 ),
+                const SizedBox(height: 30),
                 PortfolioNumbers(),
                 PortfolioElements(),
                 PortfolioEnterprises(),
                 PortfolioPremises(),
                 PortfolioPartnes(),
-                const SizedBox(
-                  height: 50.0,
-                ),
-                Center(
-                  child: Text(
-                    "Dê uma olhada deslizando para a esquerda:",
-                    style: TextStyle(
-                      color: Colors.grey.shade300,
-                      fontSize: 26.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
+                const SizedBox(height: 50),
                 SizedBox(
                   height: 100.0,
                   width: double.infinity,
-                  child: PageView.builder(
-                    controller: _titlePageController,
-                    itemCount: itemsTitle.length,
-                    onPageChanged: (index) {
-                      setState(() {
-                        currentIndex = index;
-                        _itemPageController.jumpToPage(0);
-                      });
-                    },
-                    itemBuilder: (context, index) {
-                      return Center(
-                        child: Image.asset(itemsTitle[index]),
-                      );
-                    },
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      if (currentIndex > 0)
+                        Positioned(
+                          left: 10.0,
+                          child: IconButton(
+                            icon: Icon(
+                              Icons.arrow_left,
+                              color: Colors.grey.shade200,
+                              size: 36.0,
+                            ),
+                            onPressed: () {
+                              if (currentIndex > 0) {
+                                setState(() {
+                                  currentIndex--;
+                                  _itemPageController.jumpToPage(0);
+                                });
+                              }
+                            },
+                          ),
+                        ),
+                      if (currentIndex < itemsTitle.length - 1)
+                        Positioned(
+                          right: 10.0,
+                          child: IconButton(
+                            icon: Icon(
+                              Icons.arrow_right,
+                              color: Colors.grey.shade200,
+                              size: 36.0,
+                            ),
+                            onPressed: () {
+                              if (currentIndex < itemsTitle.length - 1) {
+                                setState(() {
+                                  currentIndex++;
+                                  _itemPageController.jumpToPage(0);
+                                });
+                              }
+                            },
+                          ),
+                        ),
+                      Center(
+                        child: Image.asset(
+                          itemsTitle[currentIndex],
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
+                const SizedBox(height: 20),
                 SizedBox(
                   height: 700.0,
-                  child: PageView.builder(
-                    controller: _itemPageController,
-                    itemCount: itemsData[currentIndex].length,
-                    onPageChanged: (index) {},
-                    itemBuilder: (context, index) {
-                      return PortfolioCarrousselItem(
-                        title: itemsData[currentIndex][index]["title"],
-                        data: List<Map<String, dynamic>>.from(
-                          itemsData[currentIndex][index]["data"],
+                  child: Column(
+                    children: [
+                      Expanded(
+                        child: PageView.builder(
+                          controller: _itemPageController,
+                          itemCount: itemsData[currentIndex].length,
+                          onPageChanged: (index) {
+                            setState(() {
+                              currentItemPageIndex = index;
+                            });
+                          },
+                          itemBuilder: (context, index) {
+                            return PortfolioCarrousselItem(
+                              title: itemsData[currentIndex][index]["title"],
+                              data: List<Map<String, dynamic>>.from(
+                                itemsData[currentIndex][index]["data"],
+                              ),
+                            );
+                          },
                         ),
-                      );
-                    },
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: List.generate(
+                          itemsData[currentIndex].length,
+                          (index) => AnimatedContainer(
+                            duration: Duration(milliseconds: 300),
+                            margin: EdgeInsets.symmetric(horizontal: 4.0),
+                            height: 10.0,
+                            width: 10.0,
+                            decoration: BoxDecoration(
+                              color: currentItemPageIndex == index
+                                  ? Colors.grey.shade300
+                                  : Colors.grey.shade600,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                    ],
                   ),
                 ),
-                const SizedBox(
-                  height: 80.0,
-                ),
+                const SizedBox(height: 50),
               ],
             ),
           ),

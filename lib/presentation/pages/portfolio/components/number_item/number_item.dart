@@ -29,13 +29,13 @@ class NumberItem extends StatelessWidget {
                 Icon(
                   icon,
                   size: 40.0,
-                  color: Colors.grey.shade300,
+                  color: Colors.white,
                 ),
                 Text(
                   "+ $number",
                   style: TextStyle(
                     fontSize: 18.0,
-                    color: Colors.grey.shade300,
+                    color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -45,7 +45,7 @@ class NumberItem extends StatelessWidget {
               label,
               style: TextStyle(
                 fontSize: 16.0,
-                color: Colors.grey.shade300,
+                color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -55,7 +55,7 @@ class NumberItem extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 16.0,
                   fontWeight: FontWeight.bold,
-                  color: Colors.grey.shade300,
+                  color: Colors.white,
                 ),
               ),
           ],

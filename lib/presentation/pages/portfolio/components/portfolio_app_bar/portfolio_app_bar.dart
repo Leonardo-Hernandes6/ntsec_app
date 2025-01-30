@@ -17,7 +17,7 @@ class PortfolioAppBar extends StatelessWidget {
             },
             icon: Icon(
               Icons.arrow_back,
-              color: Colors.grey.shade300,
+              color: Colors.white,
             ),
           ),
           const SizedBox(
@@ -26,7 +26,7 @@ class PortfolioAppBar extends StatelessWidget {
           Text(
             "Portfólio",
             style: TextStyle(
-                color: Colors.grey.shade300,
+                color: Colors.white,
                 fontWeight: FontWeight.bold,
                 fontSize: 18.0),
           ),

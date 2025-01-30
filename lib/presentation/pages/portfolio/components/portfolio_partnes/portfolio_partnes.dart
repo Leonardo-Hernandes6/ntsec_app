@@ -22,7 +22,7 @@ class PortfolioPartnes extends StatelessWidget {
                 height: 24.0,
                 width: 24.0,
                 colorFilter: ColorFilter.mode(
-                  Colors.grey.shade300,
+                  Colors.white,
                   BlendMode.srcIn,
                 ),
               ),
@@ -31,7 +31,7 @@ class PortfolioPartnes extends StatelessWidget {
                 height: 15.0,
                 width: 15.0,
                 colorFilter: ColorFilter.mode(
-                  Colors.grey.shade300,
+                  Colors.white,
                   BlendMode.srcIn,
                 ),
               ),
@@ -40,7 +40,7 @@ class PortfolioPartnes extends StatelessWidget {
                 height: 25.0,
                 width: 25.0,
                 colorFilter: ColorFilter.mode(
-                  Colors.grey.shade300,
+                  Colors.white,
                   BlendMode.srcIn,
                 ),
               ),
@@ -57,7 +57,7 @@ class PortfolioPartnes extends StatelessWidget {
                 height: 20.0,
                 width: 20.0,
                 colorFilter: ColorFilter.mode(
-                  Colors.grey.shade300,
+                  Colors.white,
                   BlendMode.srcIn,
                 ),
               ),
@@ -66,7 +66,7 @@ class PortfolioPartnes extends StatelessWidget {
                 height: 20.0,
                 width: 20.0,
                 colorFilter: ColorFilter.mode(
-                  Colors.grey.shade300,
+                  Colors.white,
                   BlendMode.srcIn,
                 ),
               ),
@@ -75,7 +75,7 @@ class PortfolioPartnes extends StatelessWidget {
                 height: 35.0,
                 width: 35.0,
                 colorFilter: ColorFilter.mode(
-                  Colors.grey.shade300,
+                  Colors.white,
                   BlendMode.srcIn,
                 ),
               ),
@@ -92,7 +92,25 @@ class PortfolioPartnes extends StatelessWidget {
                 height: 30.0,
                 width: 30.0,
                 colorFilter: ColorFilter.mode(
-                  Colors.grey.shade300,
+                  Colors.white,
+                  BlendMode.srcIn,
+                ),
+              ),
+              SvgPicture.asset(
+                'assets/colaborators/elastic.svg',
+                height: 25.0,
+                width: 25.0,
+                colorFilter: ColorFilter.mode(
+                  Colors.white,
+                  BlendMode.srcIn,
+                ),
+              ),
+              SvgPicture.asset(
+                'assets/colaborators/veritas_6.svg',
+                height: 25.0,
+                width: 25.0,
+                colorFilter: ColorFilter.mode(
+                  Colors.white,
                   BlendMode.srcIn,
                 ),
               ),

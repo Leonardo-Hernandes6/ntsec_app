@@ -17,7 +17,7 @@ class MainPageIconButton extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-            color: Color(0xFF4C6030),
+            color: Color(0xFF83AE36),
             shape: BoxShape.circle,
           ),
           child: IconButton(

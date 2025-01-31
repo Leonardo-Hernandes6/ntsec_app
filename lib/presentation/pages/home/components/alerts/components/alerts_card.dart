@@ -23,7 +23,7 @@ class AlertsCard extends StatelessWidget {
         },
         background: Container(
           decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 38, 78, 39), // Cor verde
+            color: const Color.fromARGB(255, 38, 78, 39),
             borderRadius: BorderRadius.circular(10),
           ),
           child: Align(
@@ -42,9 +42,7 @@ class AlertsCard extends StatelessWidget {
             color: Colors.red, // Cor vermelha
             borderRadius: BorderRadius.circular(10),
             border: Border(
-              right: BorderSide(
-                  color: Colors.red,
-                  width: 5.0), // Borda vermelha no lado direito
+              right: BorderSide(color: Colors.red, width: 5.0),
             ),
           ),
           child: Align(

@@ -97,9 +97,9 @@ class PortfolioPartnes extends StatelessWidget {
                 ),
               ),
               SvgPicture.asset(
-                'assets/colaborators/elastic.svg',
-                height: 25.0,
-                width: 25.0,
+                'assets/colaborators/elastic_1.svg',
+                height: 30.0,
+                width: 30.0,
                 colorFilter: ColorFilter.mode(
                   Colors.white,
                   BlendMode.srcIn,

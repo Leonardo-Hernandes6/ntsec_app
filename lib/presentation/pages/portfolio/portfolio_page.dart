@@ -34,25 +34,25 @@ class _PotfolioPageState extends State<PotfolioPage> {
 
   final List<Gradient> gradients = [
     LinearGradient(
-      colors: [Color.fromARGB(255, 118, 168, 52), Color(0xFF032b30)],
+      colors: [Color.fromARGB(255, 118, 168, 52), Color(0xFF222222)],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
       stops: [0.3, 1.0],
     ),
     LinearGradient(
-      colors: [Color.fromARGB(255, 201, 27, 114), Color(0xFF032b30)],
+      colors: [Color.fromARGB(255, 216, 157, 62), Color(0xFF222222)],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
       stops: [0.3, 1.0],
     ),
     LinearGradient(
-      colors: [Color.fromARGB(255, 216, 157, 62), Color(0xFF032b30)],
+      colors: [Color.fromARGB(255, 201, 27, 114), Color(0xFF222222)],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
       stops: [0.3, 1.0],
     ),
     LinearGradient(
-      colors: [Color.fromARGB(255, 36, 90, 189), Color(0xFF032b30)],
+      colors: [Color.fromARGB(255, 36, 90, 189), Color(0xFF222222)],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
       stops: [0.3, 1.0],

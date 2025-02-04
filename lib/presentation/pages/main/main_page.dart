@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ntsec_kickoff_app/presentation/pages/main/carrousel_data.dart';
 import 'package:ntsec_kickoff_app/presentation/pages/main/components/main_page_content/main_page_content.dart';
 import 'package:ntsec_kickoff_app/presentation/pages/main/components/main_page_footer/main_page_footer.dart';
 import 'package:ntsec_kickoff_app/presentation/pages/main/components/main_page_header/main_page_header.dart';
 import 'package:ntsec_kickoff_app/presentation/pages/main/components/main_page_icon_button/main_page_icon_button.dart';
+import 'package:ntsec_kickoff_app/presentation/pages/use_cases/use_cases.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -14,6 +17,13 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  String truncateText(String text, int maxLength) {
+    if (text.length > maxLength) {
+      return '${text.substring(0, maxLength)}...';
+    }
+    return text;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +67,7 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
               child: Padding(
-                padding: EdgeInsets.only(left: 25.0, right: 25.0, bottom: 30.0),
+                padding: EdgeInsets.only(bottom: 30.0),
                 child: Column(
                   children: [
                     Padding(
@@ -72,7 +82,7 @@ class _MainPageState extends State<MainPage> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 35.0),
+                      padding: EdgeInsets.symmetric(horizontal: 60.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -143,7 +153,7 @@ class _MainPageState extends State<MainPage> {
                       height: 30.0,
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
                       child: Container(
                         decoration: BoxDecoration(
                           color: Color(0xFF7BA73F),
@@ -163,14 +173,13 @@ class _MainPageState extends State<MainPage> {
                                   ),
                                   Expanded(
                                     child: Text(
-                                      "Conecte-se com a Equipe Comercial Ideal",
+                                      "Conecte-se com a Equipe Comercial",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20.0,
                                       ),
-                                      softWrap:
-                                          true, // Permite que o texto quebre a linha
+                                      softWrap: true,
                                     ),
                                   ),
                                 ],
@@ -206,68 +215,116 @@ class _MainPageState extends State<MainPage> {
                     const SizedBox(
                       height: 25.0,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xFF435064),
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        child: Padding(
-                          padding: EdgeInsets.all(20.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Row(
-                                children: [
-                                  SvgPicture.asset(
-                                    "assets/icons/user_icon.svg",
-                                  ),
-                                  const SizedBox(
-                                    width: 10.0,
-                                  ),
-                                  Expanded(
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder:
+                                (context, animation, secondaryAnimation) =>
+                                    const UseCasesPage(),
+                            transitionsBuilder: (context, animation,
+                                secondaryAnimation, child) {
+                              const begin = Offset(1.0, 0.0);
+                              const end = Offset.zero;
+                              const curve = Curves.easeInOut;
+
+                              var slideAnimation = Tween(begin: begin, end: end)
+                                  .chain(CurveTween(curve: curve))
+                                  .animate(animation);
+
+                              return SlideTransition(
+                                position: slideAnimation,
+                                child: child,
+                              );
+                            },
+                          ),
+                        );
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xFF435064),
+                            borderRadius: BorderRadius.circular(20.0),
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xFF7389AD),
+                                Color(0xFF445266),
+                              ],
+                            ),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.all(20.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      child: Text(
+                                        "Conheça nossos casos de sucesso",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20.0,
+                                        ),
+                                        softWrap: true,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 10.0,
+                                ),
+                                Center(
+                                  child: SizedBox(
                                     child: Text(
-                                      "Usuário",
+                                      truncateText(
+                                          "Conheça os casos de sucesso que provam o impacto real das nossas soluções e veja como podemos transformar o seu negócio também.",
+                                          200),
                                       style: TextStyle(
                                         color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 25.0,
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 13.0,
                                       ),
-                                      softWrap:
-                                          true, // Permite que o texto quebre a linha
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 10.0,
-                              ),
-                              Center(
-                                child: SizedBox(
-                                  width: 280.0,
-                                  child: Text(
-                                    "Soluções voltadas para usuário, que vão desde educação básicae avançada, gerenciamento de privilégios e credenciais, duplo falor de autenticação e visibilidade de tráfego.",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 13.0,
                                     ),
                                   ),
                                 ),
-                              ),
-                              Icon(
-                                Icons.arrow_forward,
-                                color: Colors.white,
-                              )
-                            ],
+                                Icon(
+                                  Icons.arrow_forward,
+                                  color: Colors.white,
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),
                     ),
+                    const SizedBox(
+                      height: 25.0,
+                    ),
+                    MediaQuery.removePadding(
+                      context: context,
+                      removeLeft: true,
+                      removeRight: true,
+                      child: CarouselSlider(
+                        options: CarouselOptions(
+                          height: 355.0,
+                          autoPlay: true,
+                          autoPlayInterval: Duration(seconds: 5),
+                          autoPlayAnimationDuration:
+                              Duration(milliseconds: 800),
+                          autoPlayCurve: Curves.fastOutSlowIn,
+                        ),
+                        items: carrousselData
+                            .map((item) => buildCarouselItem(item))
+                            .toList(),
+                      ),
+                    ),
                     Padding(
                       padding: const EdgeInsets.symmetric(
-                        horizontal: 20.0,
+                        horizontal: 60.0,
                         vertical: 20.0,
                       ),
                       child: Column(
@@ -367,4 +424,71 @@ class _MainPageState extends State<MainPage> {
       ),
     );
   }
+}
+
+Widget buildCarouselItem(Map<String, dynamic> item) {
+  String truncateText(String text, int maxLength) {
+    return text.length > maxLength
+        ? '${text.substring(0, maxLength)}...'
+        : text;
+  }
+
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 15.0),
+    child: Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20.0),
+        gradient: LinearGradient(
+          colors: [
+            Color(0xFF0F533F),
+            Color(0xFF433C0D),
+          ],
+        ),
+      ),
+      child: Padding(
+        padding: EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Image.asset(
+                  item["icon"],
+                  width: 100,
+                  height: 100,
+                ),
+              ],
+            ),
+            const SizedBox(height: 10.0),
+            Text(
+              truncateText(item["message"], 148),
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w500,
+                fontSize: 14.0,
+              ),
+            ),
+            const SizedBox(height: 10.0),
+            Text(
+              item["name"],
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 3.0),
+            Text(
+              item["description"],
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 14.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
 }
